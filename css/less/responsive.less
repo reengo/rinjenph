@@ -1,0 +1,133 @@
+// Responsive Styles
+// --------------------------------------------------
+
+@media (min-width: 1200px) {
+	section{
+		
+	}
+}    
+
+@media (min-width: 768px) and (max-width: 980px) {
+	section{
+		.venue{width:100%}
+	}
+	.well.solo{
+		width:100%
+	}
+}  
+
+@media (min-width: 481px) and (max-width: 767px) {
+	.contributor img{
+		width:inherit !important;
+	}
+	.well.solo{
+		width:100%
+	}
+	.navbar-brand{display:block;}
+	.navbar-inverse{
+		margin-top:0;
+		height:inherit;
+		background:white;
+	}
+	.nav{
+		li:nth-child(4){
+			display: none;
+		}
+	}
+	.nav-justified{
+		margin-top:0;
+	}
+	section{
+		.venue{width:100%}
+		&#uploads{
+			&.first{
+				padding-top: 50px;
+				img{
+					width:100%;
+					&.icon{
+						display:none !important;
+					}
+				}
+			}
+		}
+	}
+	.avatar{
+		img{width:40px !important;height:40px !important}
+	}
+}  
+
+@media screen and (max-width: 480px) {
+	.thumbnail{
+		height:inherit;
+	}
+	.contributor img{
+		width:inherit !important;
+	}
+	.navbar-brand{display:block;}
+	.navbar-inverse{
+		margin-top:0;
+		height:inherit;
+		background:white;
+	}
+
+	.nav{
+		li:nth-child(4){
+			display: none;
+		}
+	}
+
+	.nav-justified{
+		margin-top:0;
+
+		&>li{
+			padding: 0;
+
+			&.active>a{
+				background: rgba(255,255,255,0.2) !important;
+				box-shadow: 0 0 8px #034507;
+			}
+
+			&>a{
+				color:white;
+				font-size:22px;
+				&:hover{
+					background: rgba(255,255,255,0.2);
+					box-shadow: 0 0 8px #034507;
+				}
+			}
+		}
+	}
+	section{
+		.venue{width:100%}
+		&#uploads{
+			&.first{
+				padding-top: 50px;
+				img{
+					width:100%;
+					
+					&.icon{
+						display:none !important;
+					}
+				}
+			}
+		}
+	}
+
+	.avatar{
+		img{display:none}
+	}
+} 
+
+/* iPads (landscape) ----------- */
+@media only screen  and (min-device-width : 768px)  and (max-device-width : 1024px) and (orientation : landscape){
+	section{
+		
+	}
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+	section{
+		
+	}
+}

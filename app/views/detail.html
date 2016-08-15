@@ -1,0 +1,14 @@
+﻿<div class="modal-content pictureDetail autoclose">
+    <div class="modal-header">
+    	<a data-bind="attr: {href: link, target: '_blank'}"><button class="btn btn-default pull-right">view</button></a>
+        <img class="img-circle" data-bind="attr: { src: user }"/> 
+        <h2><span data-bind="text: name"></span></h2>
+
+    </div>
+    <div class="modal-body">
+        <img class="img-responsive animated zoomIn" data-bind="attr: { src: image }"/>
+    </div>
+    <div class="modal-footer">
+    	<small data-bind="text: caption"></small>
+    </div>
+</div>

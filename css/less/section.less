@@ -1,0 +1,341 @@
+// Page
+// --------------------------------------------------
+
+body{
+	height:100%;
+  	overflow: auto;
+}
+
+section{
+	width:100%;
+	position: relative; 
+	margin:0;
+	padding:10% 20px;
+	overflow:hidden;
+	background-position:50% 0;
+	background-repeat: repeat;
+	background-attachment: fixed;
+	.bg-size( cover );
+	min-height:600px;
+
+	border-top:10px solid black;
+	border-bottom:10px solid black;
+
+	&#altar{
+		h1{
+			padding: 20px 0;
+			margin-left: -20px;
+			margin-right: -20px;
+			background: rgba(0,0,0,0.2);
+		}
+	}
+
+	&#welcome{
+		padding-top:300px;
+		height:1000px;
+	}
+
+	&#invi{
+		background-color:@emerald;
+		background-position: center center;
+	}
+
+	&#friendship{
+		background:url(../img/bg-tile.jpg);
+		background-attachment: inherit;
+	}
+
+	&#bands{
+		background:black;
+		.zoom { 
+			img { 
+				transition: all .8s ease-in-out; 
+				-webkit-filter: grayscale(100%); 
+				filter: grayscale(100%);
+				box-shadow: 5px 5px 5px black;
+			}
+
+			&:hover{
+				img{ 
+					-webkit-filter: none;
+					filter: none;
+				}
+			}
+		}
+		img{
+			margin:0 auto;
+		}
+	}
+
+	&#wedding{
+		&.first{
+			height:600px
+		}
+		h1{
+			margin-top:200px;
+			color:#efefef;
+		}
+	}
+
+	&#finally{
+		h1.last{
+			margin-top:300px;
+		}
+	}
+
+	&#uploads{
+		button{
+			width:100%;
+		}
+		.no-gutter{
+			background:black;
+		}
+		.thumbnail{
+			overflow:hidden;
+			padding:0;
+			background:black;
+			opacity:0.8;
+			border:none;
+			z-index:999;
+			&:hover{
+				opacity:1;
+				img{
+					//zoom: 120%;
+					transform: scale(1.2);
+				}
+			}
+		}
+		&.first{
+			padding: 0;
+			
+			img.icon{
+				position:absolute;
+				right:20px;
+				bottom:20px;
+				display: block;
+			}
+		}
+
+		.fa.zoom{
+			position:absolute;
+			margin-top:20%;
+			margin-left:50%;
+			font-size:50px;
+			text-shadow:2px 2px 2px black;
+			border: 1px solid black;
+			padding:20px;
+			background:rgba(0,0,0,0.2);
+			color:black;
+		}
+	}
+
+	&#intro{
+		h2{ 
+			font-size:60px; 
+			color: #b3ddc5;
+		}
+	}
+	.nav-arrow{
+		margin:50px auto;
+	}
+
+	&#gig{
+	  background: rgba(0,0,0,0.7) !important;
+	}
+
+	&#proposal{
+		background: url('../img/checkered-tile.jpg') !important;
+	}
+
+	&#bfgf{
+		img{
+			margin:200px 0;
+		}
+	}
+
+	&#entourage{
+		background-attachment: inherit;
+		
+		.animated{
+			-vendor-animation-delay: 2s;
+		}
+
+		h1{
+			padding-top:50px;
+			  margin-top: 85px;
+			  width: 100%;
+			  float: left;
+		}
+	}
+
+	&#map{
+		padding: 0;
+		background: #000 - #111;
+
+		h1{
+			width: 100%;
+			padding: 20px;
+			color: #fff - #111;
+		}
+
+		ul{
+			text-align:center;
+			list-style:none;
+
+			li{
+				line-height:30px;
+				color: #fff - #111;
+				font-size:20px;
+				margin:20px 0;
+			}
+		}
+	}
+
+	&.first{ 
+		border:none;
+		padding:5% 0;
+	}
+	&.video,
+	&.dark{
+		h1,h2,h3,p{
+			color:#fff - #333;
+			text-shadow:1px 1px 2px black;
+		}
+	}
+	&.light{ color:@gray + #111; }
+	&.video-block,
+	&.post-block{
+		.bg-size( cover );
+		width:100%;
+
+		.section-content{
+			position:relative;
+			margin:0 auto;
+			z-index:100;
+			text-align:center;
+
+			img{ margin:0 auto; }
+
+			h2{ color:@green + #999; }
+		}
+	}
+
+	&.video-block{
+		&:first-of-type{
+			h1{
+				margin-top:30%;
+			}
+		}
+		.bg-size( cover );
+		.section-content{
+			width: 50%;
+
+			a{
+				color:white;
+				text-decoration:none;
+				&>i{ 
+					
+					&:hover{ 
+					}
+				}
+			}
+			button{  }
+		}
+
+		&:before{
+			content:'';
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			background:black;
+			background:none\9;
+		}
+
+
+		&.bgfade{
+			&:before{
+			}
+
+		}
+
+		&:hover{
+			&:before{ 
+			}
+
+		}
+	}
+
+	&:first-of-type{
+		.section-content{
+			width: 100%;
+		}
+	}
+
+	&.noimage{
+		color:black;
+		background:white;
+		position:relative;
+	}
+	&.footer-block{
+		background:@footer-bg;
+		padding:5% 0;
+	}
+	&.feature-block{
+		background: @green;
+		padding:5% 0;
+		color:black;
+		opacity:0.9;
+
+		.feature-image{
+			text-align:right;
+		}
+	}
+
+	&.no-content{
+		.bg-size( cover );
+		padding:15%;
+	}
+
+	&.folio{
+		padding:10px 0;
+		background:black;
+		color:white;
+		.col-sm-3{margin:0;padding:0;}
+	}
+}
+
+#works{
+	color:white;
+	text-shadow:0 2px 5px black;
+	font-style: italic;
+}
+
+.profile-social-icons{
+	a{ 
+		width:60px;
+		height:60px; 
+		padding:10px;
+		text-decoration: none;
+		color:@yellow - #333;
+	}
+}
+
+.bg-size( @size ){
+	background-position: center center;
+	-webkit-background-size: @size;
+	-moz-background-size: @size;
+	-o-background-size: @size;
+	background-size: @size;
+}
+
+.run{
+}
+
+video.gijena{
+	position: fixed; right: 0; bottom: 0;
+	min-width: 100%; min-height: 100%;
+	width: auto; height: auto; z-index: -100;
+	background-size: cover;
+}

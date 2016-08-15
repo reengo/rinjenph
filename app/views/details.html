@@ -1,0 +1,98 @@
+<div class="wrapper">
+<section id="details" class="first dark parallax" style="background-image:url('img/bluegardens.jpg')">
+	<br /><br />
+	<h1 data-bind="text:intro"></h1>
+</section>
+
+<section id="entourage">
+	<div class="container">
+		<div class="row">
+			<h1 class="emphasis motif-text">Entourage</h1>	
+			
+			<div class="entourage-profiles animated zoomIn" data-bind="foreach: entourage">
+				<h1 data-bind="text: section, visible: section != ''" class="col-xs-15"></h1>
+				<div data-bind="css: bsCol">
+					<div class="media well" data-bind="css: style">
+					  <div class="media-left">
+					    <a href="#">
+					      <img data-bind="attr: {src: profile}" class="img-circle img-thumbnail center-block pull-left">
+					    </a>
+					  </div>
+					  <div class="media-body">
+					    <h2 class="media-heading" data-bind="text: name"></h2>
+					    <h4 data-bind="text: title"></h4>
+					    <blockquote data-bind="visible: wish">"<span data-bind="text: wish"></span>"</blockquote>
+					  </div>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+</section>
+
+<section id="map">
+	<div class="col-md-6">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d30875.09579718172!2d121.0589157846337!3d14.69069498044421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3397b0bbfcabfc33%3A0x18ad039d78dd6e44!2sFairview%2C+Quezon+City%2C+Metro+Manila!3m2!1d14.702178499999999!2d121.0682102!4m5!1s0x3397b755c9741e83%3A0x394d8d6a9c811c6e!2sBlue+Gardens+Wedding+and+Events+Venue%2C+28+Samonte+Street+via+North+Zuzuaregui+Road%2C+Commonwealth+Avenue%2C+Quezon+City%2C+1121+Metro+Manila!3m2!1d14.675308999999999!2d121.07693099999999!5e0!3m2!1sen!2sph!4v1435178217494" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen class="animated fadeInLeft"></iframe>
+	</div>
+	<div class="col-md-6 animated fadeInRight">
+		<h1>How to Get There</h1>
+		<ul>
+			<li><strong>From QC Circle: </strong><br />Exit to Commonwealth Avenue and take the first U-turn slot.</li>
+			<li><strong>From Fairview: </strong><br />Turn right on the Blue Gardens signage past Don Antonio Heights.</li>
+		</ul>
+		<button class="btn btn-default center-block">For more questions on how to get there. Feel free to contact us</button>
+	</div>
+</section>
+
+<section id="inviprint">
+	<div class="col-md-6 animated fadeInRight">
+		<h1>Formal Invitation</h1>
+		<div>If you didn't get a printed invitation. We apologise, we only have limited copies of the invitation (the truth is, we don't have that much money to print more :D). Anyways, you can checkout the invitation here :D</div>
+		<button class="btn btn-default center-block">For more questions on how to get there. Feel free to contact us</button>
+	</div>
+	<div class="col-md-6">
+		<iframe src="/invi/perfectharmony.pdf" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen class="animated fadeInLeft"></iframe>
+	</div>
+</section>
+
+<section id="altar" class="dark parallax" style="background-image:url('img/altar.jpg')">
+	<h1 data-bind="text: seeya"></h1>
+</section>
+
+<section id="invi" class="parallax"style="background-image: url('img/jam.jpg');">
+	<!-- <iframe src="http://jennifer.ringo.ph/invi/perfectharmony.pdf" width="100%" height="600"></iframe> -->
+    <div class="row contact-form">
+      <div class="col-md-6 col-md-offset-3">
+      <div class="alert" data-bind="css: alertStyle, visible: flash" >
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <div data-bind="html: flash"></div>
+      </div>
+        <h1>Thank you for Visiting</h1>
+      <p class="mint-green text-center">Got something to say to the couple? send them a message here:</p>
+        <div class="form-message"></div>
+        <form role="form row">
+          <div class="form-group col-md-6">
+            <input type="text" class="form-control" id="NameInput" placeholder="Name" data-bind="value: contactName">
+          </div>
+          <div class="form-group col-md-6">
+            <input type="email" class="form-control" id="EmailInput" placeholder="Email" data-bind="value: contactEmail">
+          </div>
+          <div class="form-group col-md-12">
+            <textarea class="form-control" rows="4" name="name" id="MessageInput" placeholder="Message" data-bind="value: contactMessage"></textarea>
+          </div>
+          <div class="form-group col-md-12">
+            <button data-bind="visible: sending" class="btn btn-warning pull-right">Sending Message</button>
+            <button data-bind="visible: !sending(), click: sendMail" class="btn btn-primary pull-right">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+</section>
+</div>
+
+<footer>
+	<a href="#details" class="pull-right"><button class="btn btn-default"><i class="fa fa-arrow-up"></i></button></a>
+	<div class="text-center">
+		built by the <a href="http://ringo.ph" class="mint-green">groom</a> with contents from the <a href="#" class="mint-green">bride</a> :D | <a href="#privacy" class="mint-green">privacy</a>
+	</div>
+</footer>
